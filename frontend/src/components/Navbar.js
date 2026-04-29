@@ -44,7 +44,7 @@ export default function Navbar() {
         <nav className="hidden md:flex items-center gap-9">
           {LINKS.map(l => (
             <Link key={l.path} to={l.path}
-              className={`text-sm font-medium tracking-wide transition-colors duration-200 relative group ${
+              className={`text-sm font-medium tracking-wide transition-colors duration-200 relative ${
                 pathname === l.path ? "text-white" : "text-white/65 hover:text-white"
               }`}>
               {l.label}
@@ -55,10 +55,11 @@ export default function Navbar() {
           ))}
         </nav>
 
-        {/* Right */}
-        <div className="hidden md:flex items-center gap-4">
-          <Link to="/login" className="text-sm text-white/60 hover:text-white font-medium transition-colors">Sign In</Link>
-          <Link to="/booking" className="btn-brand text-sm px-6 py-2.5 rounded-full">Book a Room</Link>
+        {/* Right — Book Now only */}
+        <div className="hidden md:flex items-center">
+          <Link to="/booking" className="btn-brand text-sm px-6 py-2.5 rounded-full">
+            Book a Room
+          </Link>
         </div>
 
         {/* Burger */}
@@ -81,9 +82,10 @@ export default function Navbar() {
               {l.label}
             </Link>
           ))}
-          <div className="pt-3 space-y-2 border-t border-white/10 mt-3">
-            <Link to="/login" className="block py-3.5 px-4 text-sm text-white/60 hover:text-white font-medium">Sign In</Link>
-            <Link to="/booking" className="block btn-brand text-center text-sm py-3.5 px-4 rounded-xl">Book a Room</Link>
+          <div className="pt-3 border-t border-white/10 mt-3">
+            <Link to="/booking" className="block btn-brand text-center text-sm py-3.5 px-4 rounded-xl">
+              Book a Room
+            </Link>
           </div>
         </div>
       </div>
