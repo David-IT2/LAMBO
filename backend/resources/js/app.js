@@ -1,4 +1,4 @@
-//import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -16,25 +16,24 @@ function ScrollToTop() {
   return null;
 }
 
-// Pages that hide the public Navbar & Footer
-const BARE_ROUTES = ["/admin"];
-
 function Layout() {
   const { pathname } = useLocation();
-  const isBare = BARE_ROUTES.some(r => pathname.startsWith(r));
+
+  // Hide navbar and footer on admin page
+  const isAdmin = pathname === "/admin" || pathname.startsWith("/admin/");
 
   return (
     <>
       <ScrollToTop />
-      {!isBare && <Navbar />}
+      {!isAdmin && <Navbar />}
       <Routes>
-        <Route path="/"             element={<Home />} />
-        <Route path="/rooms"        element={<Rooms />} />
-        <Route path="/rooms/:slug"  element={<RoomDetails />} />
-        <Route path="/booking"      element={<Booking />} />
-        <Route path="/about"        element={<About />} />
-        <Route path="/contact"      element={<Contact />} />
-        <Route path="/admin"        element={<AdminDashboard />} />
+        <Route path="/"            element={<Home />} />
+        <Route path="/rooms"       element={<Rooms />} />
+        <Route path="/rooms/:slug" element={<RoomDetails />} />
+        <Route path="/booking"     element={<Booking />} />
+        <Route path="/about"       element={<About />} />
+        <Route path="/contact"     element={<Contact />} />
+        <Route path="/admin"       element={<AdminDashboard />} />
         <Route path="*" element={
           <div className="min-h-screen flex flex-col items-center justify-center text-center px-5 pt-20">
             <p className="font-display text-8xl font-black text-gray-100 mb-4">404</p>
@@ -44,7 +43,7 @@ function Layout() {
           </div>
         } />
       </Routes>
-      {!isBare && <Footer />}
+      {!isAdmin && <Footer />}
     </>
   );
 }
