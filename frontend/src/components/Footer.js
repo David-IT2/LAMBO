@@ -31,7 +31,7 @@ export default function Footer() {
               <p className="font-display text-xl font-bold text-white">Consolata Hostel</p>
             </div>
             <p className="text-white/50 text-sm leading-relaxed max-w-xs">
-              Premium student accommodation in Karen, Nairobi. Designed for academic excellence and comfortable living.
+              Students accommodation in Karen, Nairobi. Designed for academic excellence and comfortable living.
             </p>
             <div className="flex gap-3 mt-6">
               {["f", "in", "tw"].map(s => (

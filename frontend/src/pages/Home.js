@@ -4,7 +4,7 @@ import { ROOMS, FEATURES, TESTIMONIALS } from "../data";
 import RoomCard from "../components/RoomCard";
 
 const SLIDES = [
-  { img:"https://images.unsplash.com/photo-1562664377-709f2c337eb2?w=1800&q=85", label:"Kilimani, Nairobi" },
+  { img:"https://images.unsplash.com/photo-1562664377-709f2c337eb2?w=1800&q=85", label:"Karen, Nairobi" },
   { img:"https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=1800&q=85", label:"Premium Rooms" },
   { img:"https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=1800&q=85", label:"Study & Thrive" },
 ];
@@ -101,7 +101,7 @@ export default function Home() {
               <em className="font-light italic text-brand">Designed for life.</em>
             </h2>
             <p className="sr text-gray-500 text-lg leading-relaxed mb-8 max-w-lg">
-              Since 2015, Consolata Hostel has provided Nairobi's students with a safe, comfortable, and inspiring place to live and grow. We're more than a hostel — we're a community.
+              Since 2017, Consolata Hostel has provided Nairobi's students with a safe, comfortable, and inspiring place to live and grow. We're more than a hostel — we're a community.
             </p>
             <div className="sr grid grid-cols-2 gap-4 mb-10">
               {[["200+","Students Housed"],["3","Room Types"],["5★","Average Rating"],["10+","Years Running"]].map(([n,l])=>(
