@@ -74,7 +74,7 @@ export default function Contact() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div>
                     <label className="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Full Name *</label>
-                    <input required value={form.name} onChange={set("name")} placeholder="Jane Wanjiku"
+                    <input required value={form.name} onChange={set("name")} placeholder="john doe"
                       className="w-full bg-parchment border border-stone rounded-xl px-4 py-3 text-sm"/>
                   </div>
                   <div>
