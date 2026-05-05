@@ -59,8 +59,8 @@ export default function RoomDetails() {
           <div className="rule mb-5"/>
           <p className="text-gray-500 text-lg mb-8">{room.tagline}</p>
 
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">
-            {[["👤", room.occupancy===1?"Single":room.occupancy+" people", "Occupancy"],["📐",room.size,"Room Size"],["🏠",room.type.includes("Bedsit")?"Studio":"Standard","Layout"],["⭐","4.9/5","Rating"]].map(([icon,val,label])=>(
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-10">
+            {[["👤", room.occupancy===1?"Single":room.occupancy+" people", "Occupancy"],["🏠",room.type.includes("Bedsit")?"Studio":"Standard","Layout"],["⭐","4.9/5","Rating"]].map(([icon,val,label])=>(
               <div key={label} className="bg-white rounded-2xl p-4 text-center border border-stone">
                 <p className="text-2xl mb-1">{icon}</p>
                 <p className="font-bold text-ink text-sm">{val}</p>
