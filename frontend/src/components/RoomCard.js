@@ -31,10 +31,6 @@ export default function RoomCard({ room }) {
             <span className="w-5 h-5 rounded-full bg-parchment flex items-center justify-center text-[10px]">👤</span>
             {room.occupancy === 1 ? "Single" : `${room.occupancy} people`}
           </span>
-          <span className="flex items-center gap-1.5">
-            <span className="w-5 h-5 rounded-full bg-parchment flex items-center justify-center text-[10px]">📐</span>
-            {room.size}
-          </span>
         </div>
 
         {/* Top amenities */}
