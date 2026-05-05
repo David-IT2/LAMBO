@@ -92,7 +92,6 @@ export default function Rooms() {
               <tbody>
                 {[
                   ["Occupancy",...ROOMS.map(r=>r.occupancy===1?"Single":`${r.occupancy} people`)],
-                  ["Room Size",...ROOMS.map(r=>r.size)],
                   ["Bathroom","En-suite","Shared floor","En-suite"],
                   ["WiFi","✓","✓","✓"],
                   ["Bed & Mattress","✓","✓","✓"],
